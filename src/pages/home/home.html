@@ -1,14 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      stopwatch
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content text-center>
+  <div class="digit">
+    <span class="label label-default">{{timer.minutes | twoDigit}}</span> :
+    <span class="label label-default">{{timer.secondes | twoDigit}}</span>
+  </div>
 </ion-content>
+
+<ion-footer text-center>
+  <div class="action">
+    <button class="btn btn-danger btn-lg" 
+      *ngIf="state.backward" (click)="backward()">Reset</button>            
+    <button class="btn btn-danger btn-lg" 
+      *ngIf="state.stop" (click)="stop()">Stop</button>
+    <button class="btn btn-primary btn-lg" 
+      *ngIf="state.play" (click)="play()">{{btnPlay}}</button>
+  </div>
+</ion-footer>
