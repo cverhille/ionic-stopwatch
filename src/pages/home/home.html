@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      stopwatch
+      {{'TITLE' | translate}}
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -16,10 +16,10 @@
 <ion-footer text-center>
   <div class="action">
     <button class="btn btn-danger btn-lg" 
-      *ngIf="state.backward" (click)="backward()">Reset</button>            
+      *ngIf="state.backward" (click)="backward()">{{'RESET' | translate}}</button>            
     <button class="btn btn-danger btn-lg" 
-      *ngIf="state.stop" (click)="stop()">Stop</button>
+      *ngIf="state.stop" (click)="stop()">{{'STOP' | translate}}</button>
     <button class="btn btn-primary btn-lg" 
-      *ngIf="state.play" (click)="play()">{{btnPlay}}</button>
+      *ngIf="state.play" (click)="play()">{{btnPlay | translate}}</button>
   </div>
 </ion-footer>

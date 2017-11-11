@@ -20,7 +20,7 @@ export class HomePage {
 	play() {
 		this.timer.start();
 		this.state.setPlay();
-		this.btnPlay = 'Continue';
+		this.btnPlay = 'CONTINUE';
 	}
 
 	stop() {
@@ -31,6 +31,6 @@ export class HomePage {
 	backward() {
 		this.timer.reset();
 		this.state.setBackward();
-		this.btnPlay = 'Start';
+		this.btnPlay = 'START';
 	}
 }
