@@ -10,7 +10,7 @@ import { State } from '../../app/state';
 })
 export class HomePage {
 
-	private btnPlay: string = 'Start';
+	private btnPlay: string = 'START';
 	
 	private timer: Timer = new Timer();
 	private state: State = new State();
